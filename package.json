@@ -5,14 +5,16 @@
   "keywords": [
     "jupyter",
     "jupyterlab",
-    "jupyterlab-extension"
+    "jupyterlab-extension",
+    "SAS",
+    "SAS Kernel"
   ],
   "homepage": "https://github.com/jupyterlab/jupyterlab_xkcd",
   "bugs": {
     "url": "https://github.com/jupyterlab/jupyterlab_xkcd/issues"
   },
-  "license": "BSD-3-Clause",
-  "author": "Project Jupyter",
+  "license": "Apache-2.0",
+  "author": "Jared Dean",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
@@ -21,7 +23,7 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jupyterlab/jupyterlab_xkcd.git"
+    "url": "https://github.com/SASsoftware/jupyterlab_SASKernel.git"
   },
   "scripts": {
     "build": "tsc",

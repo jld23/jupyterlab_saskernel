@@ -22,19 +22,19 @@ import '../style/index.css';
 
 
 /**
- * An xckd comic viewer.
+ * A widget to show the SAS log.
  */
-class XkcdWidget extends Widget {
+class SASlogWidget extends Widget {
   /**
-   * Construct a new xkcd widget.
+   * Construct a new SASlog widget.
    */
   constructor() {
     super();
 
-    this.id = 'xkcd-jupyterlab';
-    this.title.label = 'xkcd.com';
+    this.id = 'sas_kernel-jupyterlab';
+    this.title.label = 'SAS Log';
     this.title.closable = true;
-    this.addClass('jp-xkcdWidget');
+    this.addClass('jp-SASlogWidget');
 
     this.img = document.createElement('img');
     this.img.className = 'jp-xkcdCartoon';
@@ -73,19 +73,19 @@ class XkcdWidget extends Widget {
  * Activate the xckd widget extension.
  */
 function activate(app: JupyterLab, palette: ICommandPalette, restorer: ILayoutRestorer) {
-  console.log('JupyterLab extension jupyterlab_xkcd is activated!');
+  console.log('JupyterLab extension jupyterlab_saslog is activated!');
 
   // Declare a widget variable
-  let widget: XkcdWidget;
+  let widget: SASlogWidget;
 
   // Add an application command
   const command: string = 'xkcd:open';
   app.commands.addCommand(command, {
-    label: 'Random xkcd comic',
+    label: 'Show SAS Log',
     execute: () => {
       if (!widget) {
         // Create a new widget if one does not exist
-        widget = new XkcdWidget();
+        widget = new SASlogWidget();
         widget.update();
       }
       if (!tracker.has(widget)) {

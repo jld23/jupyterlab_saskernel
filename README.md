@@ -1,16 +1,17 @@
-# JupyterLab xkcd-extension
+# JupyterLab SASKernel-extension
 
-Show a random xkcd.com comic in a JupyterLab panel
+Create show log commands for the SAS Kernel in JupyterLab
 
 
 ## Prerequisites
 
 * JupyterLab
+* SAS Kernel
 
 ## Installation
 
 ```bash
-jupyter labextension install @jupyterlab/xkcd-extension
+jupyter labextension install @jupyterlab/SASKernel-extension
 ```
 
 ## Development
