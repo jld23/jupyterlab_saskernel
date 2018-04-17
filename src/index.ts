@@ -37,6 +37,7 @@ class SASlogWidget extends Widget {
     this.addClass('jp-SASlogWidget');
 
     this.img = document.createElement('img');
+    /*this. */
     this.img.className = 'jp-xkcdCartoon';
     this.node.appendChild(this.img);
 
@@ -79,7 +80,7 @@ function activate(app: JupyterLab, palette: ICommandPalette, restorer: ILayoutRe
   let widget: SASlogWidget;
 
   // Add an application command
-  const command: string = 'xkcd:open';
+  const command: string = 'saslog:open';
   app.commands.addCommand(command, {
     label: 'Show SAS Log',
     execute: () => {
@@ -108,19 +109,19 @@ function activate(app: JupyterLab, palette: ICommandPalette, restorer: ILayoutRe
   palette.addItem({ command, category: 'Tutorial' });
 
   // Track and restore the widget state
-  let tracker = new InstanceTracker<Widget>({ namespace: 'xkcd' });
+  let tracker = new InstanceTracker<Widget>({ namespace: 'saslog' });
   restorer.restore(tracker, {
     command,
     args: () => JSONExt.emptyObject,
-    name: () => 'xkcd'
+    name: () => 'saslog'
   });
 };
 
 /**
- * Initialization data for the jupyterlab_xkcd extension.
+ * Initialization data for the jupyterlab_saslog extension.
  */
 const extension: JupyterLabPlugin<void> = {
-  id: 'jupyterlab_xkcd',
+  id: 'jupyterlab_saslog',
   autoStart: true,
   requires: [ICommandPalette, ILayoutRestorer],
   activate: activate
